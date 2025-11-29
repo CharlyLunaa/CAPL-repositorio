@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(37, 22, 2);
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .bloque {
+            max-width: 500px;
+            width: 90%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(235, 175, 98);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .form {
+            text-align: left;
+        }
+
+        .form label {
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .form input {
+            padding: 5px;
+            margin-bottom: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .aceptar {
+            background-color: burlywood;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .aceptar:hover {
+            background-color: #49480d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bloque">
+        <fieldset class="form">
+            <form action="consultaUSER.php" method="post" id="form">
+                <div class="form">
+                    <h1>Iniciar sesion</h1>
+                    <div class="group">
+                        <label for="name">User: </label>
+                        <input type="text" id="name" name="name" size="15">
+                        <br>
+                        <p class="errores" id="errores1"></p><br>
+                        <label for="pass">Contraseña: </label>
+                        <input type="password" id="pass" name="pass" size="15">
+                        <br>
+                        <p class="errores" id="errores2"></p><br>
+                        <br><br>
+                        <p class="mensaje" id="bien"></p>
+                    </div>
+                    <input type="submit" name="aceptar" class="aceptar" value="Enviar">
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>

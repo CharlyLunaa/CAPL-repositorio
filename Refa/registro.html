@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos BD Escuela</title>
+    <style>
+        body {
+            background-color: rgb(63, 51, 34);
+            color: rgb(221, 151, 151);
+        }
+
+        .cuerpo {
+            background-color: rgb(85, 71, 50);
+        }
+        #guardar{
+            background-color: rgb(255, 236, 179); /* Color crema */
+            color: rgb(63, 51, 34); /* Color del texto */
+            padding: 10px 20px; /* Espacio interno */
+            font-size: 15px; /* Tamaño del texto */
+            border-radius: 5px; /* Borde redondeado */
+        }
+    </style>
+</head>
+
+<body>
+    <form name="formulario" id="formulario" action="registro2.php" method="post">
+        <fieldset>
+            <b>
+                <center>
+                    <h1>Registrar Pieza</h1>
+                </center>
+            </b>
+            <hr>
+            <div class="cuerpo"><br><br>
+                <label for="noparte">No.parte </label>
+                <input type="text" id="noparte" name="noparte" placeholder="No.parte" size="20" required>
+                <br><br>
+                <label for="descipcion">Descipcion: </label>
+                <input type="text" id="descipcion" name="descipcion" placeholder="Descipcion" size="20" required>
+                <br><br>
+                <label for="marca">Marca: </label>
+                <input type="text" id="marca" name="marca" placeholder="Marca" size="15">
+                <br><br>
+                <label for="ubicacion">Ubicacion: </label>
+                <input type="text" id="ubicacion" name="ubicacion" placeholder="Ubicacion" size="15">
+                <br><br>
+                <label for="precio">Precio: </label>
+                <input type="text" id="precio" name="precio" placeholder="Precio" size="15" required>
+                <br><br>
+                <label for="existencia">Existencia: </label>
+                <input type="text" id="existencia" name="existencia" placeholder="Existencia" size="20" required>
+                <br><br>
+                <label for="entrada">Entrada: </label>
+                <input type="text" id="entrada" name="entrada" placeholder="Entrada" size="20" required>
+                <br><br>
+                <label for="salida">Salida: </label>
+                <input type="text" id="salida" name="salida" placeholder="Salida" size="15" required>
+                <br><br>
+                <label for="costo">Costo: </label>
+                <input type="text" id="costo" name="costo" placeholder="Costo" size="15" required>
+                <br><br>
+                <input type="submit" id="guardar" name="guardar" value="Guardar">
+                <input type="button" id="guardar" onclick="salir();" value="Regresar">
+                <br>
+            </div>
+        </fieldset>
+        <center>
+            Autor: Carlos Adolfo Perez Luna
+        </center>
+        <script src="crearalert.js"></script>
+    </form>
+</body>
+
+</html>
