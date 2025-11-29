@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: wheat;
+        }
+
+        .panel {
+            background-color: burlywood;
+            text-align: center;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .errores {
+            background-color: yellow;
+            color: red;
+        }
+        .botones{
+            margin: auto;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panel">
+        <form action="registro.php" method="post" id="form">
+        <fieldset>
+            <legend>Crear cuenta</legend>
+            <br>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" size="20">
+            <br>
+            <p class="errores" id="errores1"></p><br>
+            <label for="telefono">Telefono: </label>
+            <input type="text" name="telefono" id="telefono" size="20">
+            <br>
+            <p class="errores" id="errores2"></p><br>
+            <label for="direccion">Direccion: </label>
+            <input type="text" name="direccion" id="direccion" size="20">
+            <br>
+            <p class="errores" id="errores3"></p><br>
+            <label for="contrasena">Contraseña: </label>
+            <input type="password" name="contrasena" id="contrasena" size="20">
+            <br>
+            <p class="errores" id="errores4"></p><br><br>
+            <div class="botones">
+            <input type="submit" name="continuar" value="Continuar"><br><br>
+            <input type="button" id="regresar" value="Regresa"><br><br>       
+            <input type="button" id="sesion" value="Inicar sesion">
+            </div>
+            </fieldset>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('regresar').addEventListener('click', () => {
+                window.location.href = "index.php";
+        });
+        document.getElementById('sesion').addEventListener('click', () => {
+                window.location.href = "usuarioIniciar.php";
+        });
+        const form = document.getElementById("form");
+
+        form.addEventListener("submit", evento => {
+            const nombre = document.getElementById("nombre");
+            const telefono = document.getElementById("telefono");
+            const direccion = document.getElementById("direccion");
+            const contrasena = document.getElementById("contrasena");
+
+            var contraVal = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{5,20}$/;
+
+            let errores1 = "";
+            let errores2 = "";
+            let errores3 = "";
+            let errores4 = "";
+
+            let entrada1 = false;
+            let entrada2 = false;
+            let entrada3 = false;
+            let entrada4 = false;
+            let confirmacion = true;
+
+            if (nombre.value.length < 3 || usuario.value.length > 20) {
+                errores1 += "El nombre de usuario debe tener entre 3 y 20 caracteres.<br>";
+                entrada1 = true;
+            }
+
+            if (telefono.value.length !== 10) {
+                errores2 += "El numero es invalido (deben ser 10 digitos).<br>";
+                entrada2 = true;
+            }
+
+            if (direccion.value.length < 10 || direccion.value.length > 50) {
+                errores3 += "La dirección debe tener entre 10 y 50 caracteres.<br>";
+                entrada3 = true;
+            }
+
+            if (!contraVal.test(contrasena.value)) {
+                errores4 += "La contraseña debe tener entre 5 y 20 caracteres, incluyendo al menos una minúscula, una mayúscula, un dígito y un carácter especial.<br>";
+                entrada4 = true;
+            }
+            if (entrada1 || entrada2 || entrada3 || entrada4) {
+                evento.preventDefault();
+            }
+
+            const parrafo1 = document.getElementById("errores1");
+            const parrafo2 = document.getElementById("errores2");
+            const parrafo3 = document.getElementById("errores3");
+            const parrafo4 = document.getElementById("errores4");
+
+            if (entrada1) { parrafo1.innerHTML = errores1; } else { parrafo1.innerHTML = ""; }
+            if (entrada2) { parrafo2.innerHTML = errores2; } else { parrafo2.innerHTML = ""; }
+            if (entrada3) { parrafo3.innerHTML = errores3; } else { parrafo3.innerHTML = ""; }
+            if (entrada4) { parrafo4.innerHTML = errores4; } else { parrafo4.innerHTML = ""; }
+
+            if (!entrada1 && !entrada2 && !entrada3 && !entrada4) {
+                confirmacion = confirm("¿Está seguro de enviar el formulario?");
+                if (!confirmacion) {
+                    evento.preventDefault();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
