@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(49, 49, 49); /* fondo negro */
+    color: #ffffff; /* texto blanco */
+    font-family: Arial, sans-serif; /* fuente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1db954; /* verde de Spotify */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* sombra */
+    max-width: 300px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    gap: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #ffffff; /* blanco */
+    color: #000000; /* negro */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #cccccc; /* gris claro al pasar el mouse */
+}

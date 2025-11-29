@@ -1,0 +1,69 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Color de fondo similar al de la imagen */
+    color: #1DB954; /* Color de texto verde Spotify */
+    line-height: 1.6;
+}
+
+.center {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1DB954; /* Color de texto verde Spotify */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #282828; /* Color de fondo de las cabeceras similar a Spotify */
+    color: #fff; /* Color de texto blanco */
+}
+
+.insertar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.insertar a {
+    text-decoration: none;
+}
+
+.modificar, .eliminar {
+    display: inline-block;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #1DB954; /* Color de texto verde Spotify */
+}
+
+.modificar img, .eliminar img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.modificar:hover, .eliminar:hover {
+    color: #fff; /* Cambia el color de texto al pasar el mouse */
+}

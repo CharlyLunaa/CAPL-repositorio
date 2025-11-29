@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de datos HTML</title>
+</head>
+<body>
+    <form id="form1">
+        <h1>Validación de datos HTML</h1>
+        Nombre: <input type="text" name="nombre" maxlength="25" required>
+        <br><br>
+        Edad: <input type="number" name="edad" min="13" max="20" required>
+        <br><br>
+        Correo: <input type="email" name="correo" required>
+        <br><br>
+        Contraseña: <input type="password" name="contra" minlength="8" maxlength="12" required>
+        <br><br>
+        <label for="selecciona">Selecciona un Deporte:</label>
+        <br>
+        Futbol: <input type="radio" id="futbol" name="opciondeporte" value="futbol" required>
+        <br>
+        Basquetbol: <input type="radio" id="basquetbol" name="opciondeporte" value="basquetbol" required>
+        <br>
+        Voleibol: <input type="radio" id="voleivol" name="opciondeporte" value="voleivol" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    
+</body>
+</html>

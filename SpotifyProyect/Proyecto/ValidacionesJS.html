@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion en JS</title>
+</head>
+<body>
+
+    <form method="post" action="" id="Form">
+        <div class="Form">
+            <center><h1>Registro</h1></center>
+            <div class="Group">
+                <label for="Name">Nombre: </label>
+                <input type="text" id="Name" placeholder="Escribe el nombre...." required>
+                <p class="Errores" id="errorName"></p>
+            </div>
+            <div class="Group">
+                <label for="Correo">Correo: </label>
+                <input type="email" id="Correo" placeholder="Escribe el correo...." required>
+                <p class="Errores" id="errorCorreo"></p>
+            </div>
+            <div class="Group">
+                <label for="Contra">Contraseña: </label>
+                <input type="password" id="Contra" placeholder="Escribe la contraseña...." required>
+                <p class="Errores" id="errorContra"></p>
+            </div>
+            <br>
+            <button type="submit">Registrate</button>
+        </div>
+    </form>
+
+    <script src="Codigo.js"></script>
+
+</body>
+</html>
